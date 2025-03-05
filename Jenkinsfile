@@ -2,9 +2,9 @@ pipeline {
     agent any
     
     environment {
-        DIRECTORY_PATH = 'C:/Program/Professional' 
-        TESTING_ENVIRONMENT = 'SonarQube'
-        PRODUCTION_ENVIRONMENT = 'Ritish' 
+        DIRECTORY_PATH = 'https://github.com/myusername/new-jenkins' 
+        TESTING_ENVIRONMENT = 'test'
+        PRODUCTION_ENVIRONMENT = 'ritish' 
     }
     
     stages {
@@ -37,7 +37,7 @@ pipeline {
         stage('Approval') {
             steps {
                 echo "Waiting for manual approval..."
-                sleep(time: 10, unit: 'SECONDS') 
+                sleep(time: 10, unit: 'SECONDS') // Simulate manual approval with a 10-second pause
                 echo "Approval received. Proceeding to production deployment."
             }
         }
