@@ -17,8 +17,8 @@ pipeline {
         
         stage('Test') {
             steps {
-                echo "Unit tests"
-                echo "Integration tests"
+                echo "Running Unit tests"
+                echo "Running Integration tests"
             }
         }
         
@@ -46,6 +46,6 @@ pipeline {
             steps {
                 echo "Deploying the code to the production environment: ${env.PRODUCTION_ENVIRONMENT}"
             }
-        }
-    }
+        }
+    }
 }
